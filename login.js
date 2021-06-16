@@ -1,15 +1,10 @@
-function login(idNum, password) {
-    readSpecificData(idNum)
-    
-}
-
-function readSpecificData(key){
+function userLogin(key){
 
     var getKeyInfo = firebase.database().ref(key);
 
     getKeyInfo.on('value', (snapshot) => {
-        const perdata = snapshot.val();
-
+        const tempperdata = snapshot.val();
+        perdata = JSON.parse(tempperdata);
         console.log(perdata);    
     })
 }
