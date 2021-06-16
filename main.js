@@ -1,9 +1,9 @@
 var perdata;
 var tempperdata;
 var idNum;
-var totalcost = 10;
+var totalcost = 12;
 var points;
 
 // userLogin(idNum);
-totalpoints(totalcost);
+totalPoints(totalcost);
 console.log(points);

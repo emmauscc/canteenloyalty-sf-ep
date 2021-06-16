@@ -1,3 +1,3 @@
 function totalPoints(money){
-    points = Math.ceiling(money*0.1);
+    points = Math.floor(money*0.25*10);
 }
