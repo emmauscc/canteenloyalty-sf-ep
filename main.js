@@ -1,6 +1,6 @@
 var perdata;
 var tempperdata;
-var idNum;
+// var idNum = $('username').val();
 var totalcost = 12;
 var points;
 
