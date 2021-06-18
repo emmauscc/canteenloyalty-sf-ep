@@ -13,6 +13,8 @@ $(document).ready(function(){
             var JSONfile = csvJSON(result);
             
             data = JSON.parse(JSONfile);
+
+            console.log(data);
             
         }   
     })
@@ -44,17 +46,26 @@ $(document).ready(function(){
     
     console.log("ready");
     console.log(data);
-    display(data);
+    
+    $('.shoppingcontainer').append("<h2>Hot Food</h2>");
+    
+    display(data, "Hot Food");
 
+   
     
     
-    function display(a){
+    function display(a,category){
+
         for (var i=0;i<a.length-1;i++){
-             $('.shoppingcontainer').append("<div></div>").children().last().addClass("grid"+[i]);
-             $('.grid'+[i]).append("<h3>" + a[i]["Item"] + "</h3>").append(" ").append("<br>").append("<p>$"+a[i]["Price"]+"</p>");
-             $('.grid'+[i]).append("<br>").append("<img src=\"http://via.placeholder.com/150x150/163658?text=Food Image\">").append("<br>");
-             $('.grid'+[i]).css({"height": "250px", "width":"190px", "float":"left", "border":"solid #eab02b 3px","text-align":"center", "margin":"2px"});
-         }
+
+            if (a[i]["Category"]=category){
+                console.log(a[i]["Category"]);
+                $('.shoppingcontainer').append("<div></div>").children().last().addClass("grid"+[i]);             
+                $('.grid'+[i]).append("<h3>" + a[i]["Item"] + "</h3>").append(" ").append("<br>").append("<p>$"+a[i]["\"Price\""]+"</p>");
+                $('.grid'+[i]).append("<br>").append("<img src=\"http://via.placeholder.com/150x150/163658?text=Food Image\">").append("<br>");
+                $('.grid'+[i]).css({"height": "250px", "width":"190px", "float":"left", "border":"solid #eab02b 3px","text-align":"center", "margin":"2px"});
+            }
+        }
     }
     
 
