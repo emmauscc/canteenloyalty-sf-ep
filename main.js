@@ -21,6 +21,7 @@ function main(){
     displayCategory("Drinks", "DrinksBox");
     displayCategory("Specials", "SpecialsBox");
     addToCart();
+    console.log(cartArray);
 
     // userLogin(idNum);
     totalPoints(totalcost);
