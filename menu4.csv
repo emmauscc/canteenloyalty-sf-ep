@@ -1,0 +1,29 @@
+Item,Cost,Type,Category 
+Garlic Bread,2,HotFood,Hot Food
+Pizza,2.5,HotFood,Hot Food 
+Potato Wedges,2,HotFood,Hot Food
+Hot Dog,3.7,HotFood,Hot Food
+Pie,3.7,HotFood,Hot Food
+Sausage Roll,3.7,HotFood,Hot Food
+Chilli Chicken,3.5,Baguette,Baguette
+Chicken Schnitzel,3.5,Baguette,Baguette
+Meatball,3.5,Baguette,Baguette
+Falafel,4,Baguette,Baguette
+Grainwaves,1,Snacks,Snacks
+Plain chips,1,Snacks,Snacks
+Honey Soy Chicken Chips,1,Snacks,Snacks
+Fruit,1.2,Snacks,Snacks
+Banana Bread,2,Snacks,Snacks
+Fruit Tubes,0.5,Ice Blocks,Ice Blocks
+Chocolate Moo,1,Ice Blocks,Ice Blocks
+Lifesaver Icy Pole,1,Ice Blocks,Ice Blocks
+Lemonade Icy Pole,1,Ice Blocks,Ice Blocks
+Twisted frozen yogurt,2,Ice Blocks,Ice Blocks
+Water ,1.5,Drinks,Drinks
+Juices-250ml,1.5,Drinks,Drinks
+Up and Go,2,Drinks,Drinks
+Oak Strawberry-Chocolate,2,Drinks,Drinks
+Sushi,2.5,Specials,Specials
+Butter Chicken with Rice,5,Specials ,Specials
+Malaysian Chicken with Rice,5,Specials ,Specials
+Dahl,5,Specials,Specials

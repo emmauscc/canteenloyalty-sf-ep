@@ -21,10 +21,12 @@ body{
     font-size: 50px; 
     text-align: center; 
     margin-bottom: 15px; 
+    
 }
 
 .title{
-
+    margin-right: auto; 
+    margin-left: auto;
     float: left;
 }
 
@@ -53,19 +55,20 @@ body{
 .shoppingcontainer{
     float: left; 
     background-color: white; 
-    height: 1825px; 
     width: 800px;
     margin-left: 15px;
     padding: 10px;
 }
 
 h3{
-    margin-bottom: -15px;
+    margin-bottom: -25px;
+    font-size: 20px;
 }
+
 
 p{
     font-size: 15px;
     font-weight: normal;
     margin-bottom: 2px;
-    margin-top: 2px;
+    margin-top: -5px;
 }
