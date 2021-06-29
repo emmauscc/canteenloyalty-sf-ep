@@ -87,3 +87,19 @@ p{
     border-color:#163658;
     border-width:2px;
 }
+
+.IDinput{
+    width:100px;
+    height:30px;
+    border-width:5px;
+    border-color:red;
+    float: center;
+}
+
+.loginButton{
+    width:100px;
+    height:50px;
+    border-width:5px;
+    border-color:red;
+    float: center;
+}
