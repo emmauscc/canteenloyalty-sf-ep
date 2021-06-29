@@ -39,8 +39,10 @@ body{
 
 .container{
     width: 1050px; 
+    height: 100%;
     margin-left: auto; 
     margin-right: auto;
+    background-color: white;
 }
 
 .sidecolumn{
@@ -87,4 +89,33 @@ p{
     border-style:solid;
     border-color:#163658;
     border-width:2px;
+}
+
+.linkcontainer{
+	width: 100%;
+	height: 30px;
+	background-color: purple ;
+	margin-left: auto; 
+	margin-right: auto;
+    line-height: 30px;
+    float: left;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.linkcontainer a{
+	float: left; 
+	display: block; 
+	height: 100%; 
+	width: 25%;
+	text-decoration: none; 
+	text-align: center; 
+	line-height: 30px;
+    background-color:#eab02b; 
+    color: #163658;
+}
+
+.linkcontainer a:hover{
+	background-color: white; 
+	color: #163658;
 }
