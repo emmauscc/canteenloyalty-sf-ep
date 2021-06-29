@@ -137,5 +137,22 @@ p{
 
 .linkcontainer a:hover{
 	background-color: white; 
-	color: #163658;
+    color: #163658;
+    
+}
+
+.IDinput{
+    width:100px;
+    height:30px;
+    border-width:5px;
+    border-color:red;
+    float: center;
+}
+
+.loginButton{
+    width:100px;
+    height:50px;
+    border-width:5px;
+    border-color:red;
+    float: center;
 }
