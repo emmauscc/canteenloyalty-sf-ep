@@ -10,12 +10,15 @@
             for (var i=0; i<data.length-1;i++){
                 if ($(this).attr('id')=="cart"+[i]){
                     cartArray.push(data[i]);
+                    display(data[i],null,"#pagecontainercart");
                 }
             }
             
             console.log(cartArray);
 
-        })
+        });
+
+        
 
 
     }
