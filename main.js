@@ -35,6 +35,7 @@ function main(){
     displayCategory("Specials", "SpecialsBox");
     addToCart();
     console.log(cartArray);
+    display(cartArray,"Baguette","#pagecontainercart");
 
     // userLogin(idNum);
     totalPoints(totalcost);
