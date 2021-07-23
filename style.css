@@ -157,7 +157,6 @@ p{
 
 .loginButton{
     width:100px;
-<<<<<<< HEAD
     height:30px;
     background-color:#eab02b;
     float: left;
@@ -202,8 +201,6 @@ p{
     margin-right: auto;
     margin-bottom: -20px;  
     float: left;
-=======
-    height:50px;
     border-width:5px;
     border-color:red;
     float: center;
@@ -215,5 +212,4 @@ p{
     background-color: white;
     border-width:5px;
     border-color:red;
->>>>>>> ed0a71a45f3323c92e67dce60efe8946fe736873
 }
