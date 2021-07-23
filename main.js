@@ -33,9 +33,15 @@ function main(){
     displayCategory("Ice Blocks", "IceBlocksBox");
     displayCategory("Drinks", "DrinksBox");
     displayCategory("Specials", "SpecialsBox");
+
+    
+
+    display(cartArray, null, '#pagecontainercart');
+    /*
     addToCart();
     console.log(cartArray);
     display(cartArray,"Baguette","#pagecontainercart");
+    */
 
     // userLogin(idNum);
     totalPoints(totalcost);

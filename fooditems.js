@@ -1,3 +1,5 @@
+var cartArray = [];
+
 function displayCategory(title,box){
     $('.shoppingcontainer').append("<h2>"+title+"<br></br></h2>").children().last().addClass(box).attr("id",box).append(display(data,title,"."+box)).css({"float": "left"}); 
     console.log("display working");        
