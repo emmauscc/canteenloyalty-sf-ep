@@ -218,3 +218,9 @@ p{
     border-width:5px;
     border-color:red;
 }
+
+#profile{
+    width: 400px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
