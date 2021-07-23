@@ -15,7 +15,10 @@
                 }
             }
             
+            localStorage.setItem("cartArray",JSON.stringify(cartArray));
+
             console.log(cartArray);
+            console.log(JSON.parse(localStorage.getItem("cartArray")));
 
         });
 

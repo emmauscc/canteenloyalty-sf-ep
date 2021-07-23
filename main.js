@@ -34,9 +34,15 @@ function main(){
     displayCategory("Drinks", "DrinksBox");
     displayCategory("Specials", "SpecialsBox");
 
-    
+    addToCart();
 
-    display(cartArray, null, '#pagecontainercart');
+    var newCartArray = localStorage.getItem("cartArray");
+
+    var finalCartArray = JSON.parse(newCartArray);
+
+    console.log(finalCartArray);
+
+    displayCart(finalCartArray);
     /*
     addToCart();
     console.log(cartArray);
