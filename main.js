@@ -35,7 +35,7 @@ function main(){
     displayCategory("Specials", "SpecialsBox");
 
     addToCart();
-    console.log("hi");
+
     var newCartArray = localStorage.getItem("cartArray");
 
     var finalCartArray = JSON.parse(newCartArray);

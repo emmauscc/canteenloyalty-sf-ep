@@ -2,6 +2,9 @@
 
     function addToCart(){
 
+        cartArray = JSON.parse(localStorage.getItem("cartArray"));
+       
+
         console.log(cartArray);
 
         $('.cartButtons').click(function(){
@@ -17,9 +20,9 @@
             
             localStorage.setItem("cartArray",JSON.stringify(cartArray));
 
+            //console.log(cartArray);
+            //console.log(JSON.parse(localStorage.getItem("cartArray")));
             console.log(cartArray);
-            console.log(JSON.parse(localStorage.getItem("cartArray")));
-
         });
 
         

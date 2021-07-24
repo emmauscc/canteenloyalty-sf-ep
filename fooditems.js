@@ -23,10 +23,10 @@ function displayCart(dataset){
 
     for (var i=0;i<dataset.length;i++){
 
-            $('#pagecontainercart').append("<div></div>").children().last().addClass("grid"+[i]);             
-            $('.grid'+[i]).append("<h3>" + dataset[i]["Item"] + "</h3>").append(" ").append("<br>").append("<p>$"+dataset[i]["Price"]+"</p>");
-            $('.grid'+[i]).append("<br>").append("<img src=\"http://via.placeholder.com/150x150/163658?text=Food Image\">").append("<br>").append("<button type='button'>Add to Cart</button>").children().last().addClass("cartButtons").attr("id","cart"+[i]);
-            $('.grid'+[i]).css({ "width":"190px", "float":"left", "border":"solid #eab02b 3px","text-align":"center", "margin":"2px"});
+            $('#pagecontainercart').append("<div></div>").children().last().addClass("cartgrid"+[i]);             
+            $('.cartgrid'+[i]).append("<h3>" + dataset[i]["Item"] + "</h3>").append(" ").append("<br>").append("<p>$"+dataset[i]["Price"]+"</p>");
+            $('.cartgrid'+[i]).append("<br>").append("<img src=\"http://via.placeholder.com/150x150/163658?text=Food Image\">").append("<br>").append("<button type='button'>Add to Cart</button>").children().last().addClass("cartButtons").attr("id","cart"+[i]);
+            $('.cartgrid'+[i]).css({ "width":"190px", "float":"left", "border":"solid #eab02b 3px","text-align":"center", "margin":"2px"});
 
     }
 }
