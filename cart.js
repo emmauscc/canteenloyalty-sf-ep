@@ -3,7 +3,10 @@
     function addToCart(){
 
         cartArray = JSON.parse(localStorage.getItem("cartArray"));
-       
+
+        if (cartArray == null){
+            cartArray = [];
+        }
 
         console.log(cartArray);
 
@@ -21,7 +24,36 @@
             localStorage.setItem("cartArray",JSON.stringify(cartArray));
 
             //console.log(cartArray);
-            //console.log(JSON.parse(localStorage.getItem("cartArray")));
+            console.log(JSON.parse(localStorage.getItem("cartArray")));
+            console.log(cartArray);
+        });
+
+        
+
+
+    }
+
+    function removeFromCart(){
+
+        cartArray = JSON.parse(localStorage.getItem("cartArray"));
+
+        $('.removecartButtons').click(function(){
+
+            console.log($(this).attr('id') + 'gone');
+
+            for (var i=0; i<cartArray.length-1;i++){
+                if ($(this).attr('id')=="removecart"+[i]){
+                    cartArray.splice(cartArray[i]);
+                    
+                    
+                }
+            }
+
+            
+            localStorage.setItem("cartArray",JSON.stringify(cartArray));
+
+            //console.log(cartArray);
+            console.log(JSON.parse(localStorage.getItem("cartArray")));
             console.log(cartArray);
         });
 
@@ -32,4 +64,4 @@
 
     
     
-    
+

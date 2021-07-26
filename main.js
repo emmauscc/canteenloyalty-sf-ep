@@ -36,13 +36,17 @@ function main(){
 
     addToCart();
 
-    var newCartArray = localStorage.getItem("cartArray");
+    
+    var newCartArray = localStorage.getItem("cartArray"); 
 
     var finalCartArray = JSON.parse(newCartArray);
 
     console.log(finalCartArray);
 
     displayCart(finalCartArray);
+
+    removeFromCart();
+
     /*
     addToCart();
     console.log(cartArray);
