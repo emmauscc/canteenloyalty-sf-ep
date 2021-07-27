@@ -15,10 +15,16 @@
             console.log($(this).attr('id'));
 
             for (var i=0; i<data.length-1;i++){
+                if(cartArray.includes(data[i])==false){
+                
                 if ($(this).attr('id')=="cart"+[i]){
-                    cartArray.push(data[i]);
+
                     
+                        cartArray.push(data[i]);   
+                    
+  
                 }
+            }
             }
             
             localStorage.setItem("cartArray",JSON.stringify(cartArray));
@@ -33,6 +39,8 @@
 
     }
 
+  
+
     function removeFromCart(){
 
         cartArray = JSON.parse(localStorage.getItem("cartArray"));
@@ -41,7 +49,7 @@
 
             console.log($(this).attr('id') + 'gone');
 
-            for (var i=0; i<cartArray.length-1;i++){
+            for (var i=0; i<cartArray.length;i++){
                 if ($(this).attr('id')=="removecart"+[i]){
                     console.log(cartArray);
                     
@@ -50,6 +58,8 @@
                     console.log(cartArray);
 
                     localStorage.setItem("cartArray",JSON.stringify(cartArray));
+
+                    $("#pagecontainercart").empty();
 
                     displayCart(cartArray);
                     
