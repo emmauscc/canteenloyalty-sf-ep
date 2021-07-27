@@ -27,7 +27,7 @@ $(document).ready(function(){
             console.log('not empty');
             firebaseLogin($('.IDinput').val());
             console.log(perdata); 
-            // window.location.href = "index.html";
+            // window.location.href = "index.html"
         }
     };
 
