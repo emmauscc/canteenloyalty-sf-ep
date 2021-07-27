@@ -18,7 +18,7 @@ function display(dataset,category,location){
         }
     }
 }
-
+console.log("hi")
 function displayCart(dataset){
 
     for (var i=0;i<dataset.length;i++){
