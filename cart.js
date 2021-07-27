@@ -43,8 +43,15 @@
 
             for (var i=0; i<cartArray.length-1;i++){
                 if ($(this).attr('id')=="removecart"+[i]){
-                    cartArray.splice(cartArray[i]);
+                    console.log(cartArray);
                     
+                    cartArray.splice(cartArray[i],1);
+                    
+                    console.log(cartArray);
+
+                    localStorage.setItem("cartArray",JSON.stringify(cartArray));
+
+                    displayCart(cartArray);
                     
                 }
             }

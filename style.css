@@ -219,6 +219,11 @@ p{
     border-color:red;
 }
 
+.errormessage{
+    float: left;
+    width: 500px;
+}
+
 #profile{
     width: 400px;
     margin-top: 20px;
