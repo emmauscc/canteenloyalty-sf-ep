@@ -1,3 +1,8 @@
+
+$(document).ready(function(){
+    $('.loginButton').click(loginUser());
+});
+
 function loginUser(){
     console.log("button pressed");
     console.log($('.IDinput').val().length);   

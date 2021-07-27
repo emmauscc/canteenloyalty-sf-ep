@@ -36,7 +36,7 @@ function main(){
 
     $('.loginButton').click(console.log('pressed'));
     
-    $('.loginButton').click(loginUser());
+    
     
 
     displayCategory("Hot Food", "HotFoodBox");
