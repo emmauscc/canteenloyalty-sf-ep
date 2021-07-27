@@ -22,7 +22,7 @@ $(document).ready(function(){
         console.log("button pressed");
         console.log($('.IDinput').val());   
         if ($('.IDinput').val().length<5||$('.IDinput').val().length>5){
-            $('.alertbox').html('Login failed. Try again');
+            $('.errormessage').html('Login failed. Try again');
         } else {
             console.log('not empty');
             firebaseLogin($('.IDinput').val());
