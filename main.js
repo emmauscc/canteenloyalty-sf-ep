@@ -6,7 +6,7 @@ var perdata = {};
 
 var tempperdata;
 // var idNum = $('username').val();
-var totalcost = 12;
+var totalcost;
 var points;
 
 // userLogin(idNum);
@@ -17,13 +17,26 @@ var cartArray = [];
 
 $(document).ready(main);
 
-
 function main(){
-    var perdata;
-    var tempperdata;
-    // var idNum = $('username').val();
-    var totalcost = 12;
-    var points;
+    
+
+    var firebaseConfig = {
+        apiKey: "AIzaSyAD6I8LABP6IgRjECl6ktRP_xRUajcFQM8",
+        authDomain: "canteen-loyalty.firebaseapp.com",
+        databaseURL: "https://canteen-loyalty-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "canteen-loyalty",
+        storageBucket: "canteen-loyalty.appspot.com",
+        messagingSenderId: "721137803742",
+        appId: "1:721137803742:web:d1ee73eec75fba91673d4f",
+        measurementId: "G-T6VBLGTYVT"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+
+    $('.loginButton').click(console.log('pressed'));
+    
+    $('.loginButton').click(loginUser());
     
 
     displayCategory("Hot Food", "HotFoodBox");
