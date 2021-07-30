@@ -61,22 +61,24 @@ function main(){
     removeFromCart();
 
     var finalCartTotal = localStorage.getItem("cartTotal");
-
-    
-      
  
     $('.finalprice').html("$ " + finalCartTotal); 
   
+    addToFavourite();
 
+    var newFavouriteArray = localStorage.getItem("favouriteArray"); 
+
+    var finalFavouriteArray = JSON.parse(newFavouriteArray);
+
+    console.log(finalFavouriteArray);
+
+    displayFavourite(finalFavouriteArray);
+
+    removeFromFavourite();
     
 
     
 
-    /*
-    addToCart();
-    console.log(cartArray);
-    display(cartArray,"Baguette","#pagecontainercart");
-    */
 
     // userLogin(idNum);
     totalPoints(totalcost);

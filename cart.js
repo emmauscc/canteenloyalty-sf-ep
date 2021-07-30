@@ -68,7 +68,7 @@ function addToCart(){
 
 function removeFromCart(){
 
-    cartArray = JSON.parse(localStorage.getItem("cartArray"));
+    
     cartTotal = JSON.parse(localStorage.getItem("cartTotal"));
 
 
@@ -78,18 +78,36 @@ function removeFromCart(){
 
         console.log($(this).attr('id') + 'gone');
 
+        cartArray = JSON.parse(localStorage.getItem("cartArray"));
+
         for (var i=0; i<cartArray.length;i++){
 
             if ($(this).attr('id')=="removecart"+[i]){
 
-                cartArray.splice(cartArray[i],1);
-                $("#pagecontainercart").empty();
+
+                console.log(cartArray);
+                cartArray.splice(i,1);
+                console.log(cartArray);
+                //console.log(cartArray[i]['Price']);
+
+                $(".cartitems").empty();
                 displayCart(cartArray);
+                cartTotal = 0;
+
+                for (var i=0; i<cartArray.length;i++){
+                    var num = parseFloat(cartArray[i]['Price']);
+                    cartTotal = cartTotal + num;
+                }
+
+                /*
 
                 var num = parseFloat(data[i]['Price']);
                 console.log(num);   
                 cartTotal = cartTotal - num;
+                cartTotal = cartTotal.toFixed(1);
                 console.log("cart total is " + cartTotal);
+
+                */
                 
             }
 

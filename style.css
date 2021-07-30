@@ -316,13 +316,46 @@ p{
     height: 20px;
 }
 
+.favouriteButtons{
+    float: left; 
+    margin-top: 10px;
+    background-color: #eab02b;
+    font-family: 'Times New Roman', Times, serif;
+    border: solid #163658 1px;
+    color: #163658;
+    margin-left: 40px;
+    height: 20px;
+}
+
+.removefavouriteButtons{
+    float: left; 
+    margin-top: 10px;
+    background-color: #eab02b;
+    font-family: 'Times New Roman', Times, serif;
+    border: solid #163658 1px;
+    color: #163658;
+    margin-left: 20px;
+    height: 20px;
+    
+}
+
 .foodimage{
     margin-top: -10px;
 }
 
 .checkoutbutton{
     float: left; 
-    margin-top: 10pxx;
+    margin-top: 10px;
+    background-color: #eab02b;
+    font-family: 'Times New Roman', Times, serif;
+    border: solid #163658 1px;
+    color: #163658;
+    height: 20px;
+}
+
+.clearbutton{
+    float: left; 
+    margin-top: 10px;
     background-color: #eab02b;
     font-family: 'Times New Roman', Times, serif;
     border: solid #163658 1px;
@@ -334,4 +367,9 @@ p{
     color: #163658;
     font-family: 'Times New Roman', Times, serif;
     font-size: 50px;
+}
+
+#pagecontainerfavourite{
+    padding: 20px;
+    width: 1010px; 
 }

@@ -14,7 +14,8 @@ function display(dataset,category,location){
             $('.grid'+[i]).append("<h3>" + dataset[i]["Item"] + "</h3>").append(" ").append("<br>").append("<p>$"+dataset[i]["Price"]+"</p>");
             $('.grid'+[i]).append("<br>").append("<img src='http://via.placeholder.com/150x150/163658?text=Food Image' class='foodimage'>").append("<br>").append("<input type='number' placeholder='Qty'></input>").children().last().addClass("qtyinput").attr("id","qty"+[i]).append("<br>");
             $('.grid'+[i]).append("<button type='button'>Add to Cart</button>").children().last().addClass("cartButtons").attr("id","cart"+[i]);
-            $('.grid'+[i]).css({ "width":"190px", "float":"left", "border":"solid #eab02b 3px","text-align":"center", "margin":"2px", "padding-bottom":"10px", "height":"290px"});
+            $('.grid'+[i]).append("<button type='button'>Add to Favourites</button>").children().last().addClass("favouriteButtons").attr("id","favourite"+[i]);
+            $('.grid'+[i]).css({ "width":"190px", "float":"left", "border":"solid #eab02b 3px","text-align":"center", "margin":"2px", "padding-bottom":"10px", "height":"300px"});
         }
     }
 }
@@ -24,11 +25,26 @@ function displayCart(dataset){
 
     for (var i=0;i<dataset.length;i++){
 
-            $('.cartitems').append("<div></div>").children().last().addClass("cartgrid"+[i]);             
-            $('.cartgrid'+[i]).append("<h3>" + dataset[i]["Item"] + "</h3>").append(" ").append("<br>").append("<p>$"+dataset[i]["Price"]+"</p>");
-            $('.cartgrid'+[i]).append("<br>").append("<img src=\"http://via.placeholder.com/150x150/163658?text=Food Image\">").append("<br>").append("<input type='number' placeholder='Qty'></input>").children().last().addClass("removeqtyinput").attr("id","removeqty"+[i]).append("<br>");
-            $('.cartgrid'+[i]).append("<br>").append("<button type='button'>Remove from Cart</button>").children().last().addClass("removecartButtons").attr("id","removecart"+[i]);
-            $('.cartgrid'+[i]).css({ "width":"190px", "float":"left", "border":"solid #eab02b 3px","text-align":"center", "margin":"2px", "padding-bottom":"10px", "height":"290px"});
+        $('.cartitems').append("<div></div>").children().last().addClass("cartgrid"+[i]);             
+        $('.cartgrid'+[i]).append("<h3>" + dataset[i]["Item"] + "</h3>").append(" ").append("<br>").append("<p>$"+dataset[i]["Price"]+"</p>");
+        $('.cartgrid'+[i]).append("<br>").append("<img src=\"http://via.placeholder.com/150x150/163658?text=Food Image\">").append("<br>").append("<input type='number' placeholder='Qty'></input>").children().last().addClass("removeqtyinput").attr("id","removeqty"+[i]).append("<br>");
+        $('.cartgrid'+[i]).append("<br>").append("<button type='button'>Remove from Cart</button>").children().last().addClass("removecartButtons").attr("id","removecart"+[i]);
+        $('.cartgrid'+[i]).css({ "width":"190px", "float":"left", "border":"solid #eab02b 3px","text-align":"center", "margin":"2px", "padding-bottom":"10px", "height":"290px"});
+
+    }
+}
+
+function displayFavourite(dataset){
+
+
+    for (var i=0;i<dataset.length;i++){
+
+        $('#pagecontainerfavourite').append("<div></div>").children().last().addClass("favouritegrid"+[i]);             
+        $('.favouritegrid'+[i]).append("<h3>" + dataset[i]["Item"] + "</h3>").append(" ").append("<br>").append("<p>$"+dataset[i]["Price"]+"</p>");
+        $('.favouritegrid'+[i]).append("<br>").append("<img src=\"http://via.placeholder.com/150x150/163658?text=Food Image\">").append("<br>").append("<input type='number' placeholder='Qty'></input>").children().last().addClass("removeqtyinput").attr("id","removeqty"+[i]).append("<br>");
+        $('.favouritegrid'+[i]).append("<button type='button'>Add to Favourites</button>").children().last().addClass("favouriteButtons").attr("id","favourite"+[i]);
+        $('.favouritegrid'+[i]).append("<br>").append("<button type='button'>Remove from Favourites</button>").children().last().addClass("removefavouriteButtons").attr("id","removefavourite"+[i]);
+        $('.favouritegrid'+[i]).css({ "width":"190px", "float":"left", "border":"solid #eab02b 3px","text-align":"center", "margin":"2px", "padding-bottom":"10px", "height":"320px"});
 
     }
 }
