@@ -1,113 +1,109 @@
 
 
-    function addToCart(){
+function addToCart(){
 
-        cartArray = JSON.parse(localStorage.getItem("cartArray"));
+    cartArray = JSON.parse(localStorage.getItem("cartArray"));
 
-        if (cartArray == null){
-            cartArray = [];
-            localStorage.setItem("cartTotal",0);
-            
-        }
-
-        else{
-            cartTotal = JSON.parse(localStorage.getItem("cartTotal"));
-        }
-
-        //console.log(cartArray);
-
-        $('.cartButtons').click(function(){
-
-            console.log($(this).attr('id'));
-
-            for (var i=0; i<data.length;i++){
-
-                
-                
-                if ($(this).attr('id')=="cart"+[i]){
-
-                    console.log(cartArray);
-
-                    //console.log(cartArray.includes(data[i]));
-
-                    if(cartArray.includes(data[i])==false){
-
-                        var num = parseFloat(data[i]['Price']);
-                        console.log(num);
-                        
-                        cartArray.push(data[i]); 
-                        cartTotal = cartTotal + num;
-                        console.log("cart total is " + cartTotal);
-                        
-                    }
-
-                    
-  
-                }
-
-                
-            
-            }
-
-            
-            
-            localStorage.setItem("cartArray",JSON.stringify(cartArray));
-            localStorage.setItem("cartTotal",JSON.stringify(cartTotal));
-
-            
-
-            //console.log(cartArray);
-            console.log(JSON.parse(localStorage.getItem("cartArray")));
-            console.log(cartArray);
-        });
-
+    if (cartArray == null){
         
+        cartArray = [];
+        localStorage.setItem("cartTotal",0);
+        
+    }
 
+    else{
+
+        cartTotal = JSON.parse(localStorage.getItem("cartTotal"));
 
     }
 
-  
 
-    function removeFromCart(){
 
-        cartArray = JSON.parse(localStorage.getItem("cartArray"));
+    $('.cartButtons').click(function(){
 
-        $('.removecartButtons').click(function(){
+        console.log($(this).attr('id'));
 
-            document.location.reload();
+        for (var i=0; i<data.length;i++){
+            
+            if ($(this).attr('id')=="cart"+[i]){
 
-            console.log($(this).attr('id') + 'gone');
+                console.log(cartArray);
 
-            for (var i=0; i<cartArray.length;i++){
-                if ($(this).attr('id')=="removecart"+[i]){
-                    console.log(cartArray);
-                    
-                    cartArray.splice(cartArray[i],1);
-                    
-                    console.log(cartArray);
+                //console.log(cartArray.includes(data[i]));
 
-                
-                    $("#pagecontainercart").empty();
-                
-                    displayCart(cartArray);
-                    
+                if(cartArray.includes(data[i])==false){
+
+                    cartArray.push(data[i]); 
+
+                    var num = parseFloat(data[i]['Price']);
+                    console.log(num);
+                    cartTotal = cartTotal + num;
+                    console.log("cart total is " + cartTotal);
                     
                 }
+
+            }
+        
+        }
+
+        localStorage.setItem("cartArray",JSON.stringify(cartArray));
+        localStorage.setItem("cartTotal",JSON.stringify(cartTotal));
+
+        console.log(JSON.parse(localStorage.getItem("cartArray")));
+        console.log(cartArray);
+    });
+
+    $('.clearbutton').click(function(){
+        console.log("clear processed")
+        cartTotal = 0; 
+        localStorage.setItem("cartTotal",JSON.stringify(cartTotal));
+        cartArray = [];
+        localStorage.setItem("cartArray",JSON.stringify(cartArray));
+        document.location.reload();
+    });
+
+}
+
+
+
+function removeFromCart(){
+
+    cartArray = JSON.parse(localStorage.getItem("cartArray"));
+    cartTotal = JSON.parse(localStorage.getItem("cartTotal"));
+
+
+    $('.removecartButtons').click(function(){
+
+        document.location.reload();
+
+        console.log($(this).attr('id') + 'gone');
+
+        for (var i=0; i<cartArray.length;i++){
+
+            if ($(this).attr('id')=="removecart"+[i]){
+
+                cartArray.splice(cartArray[i],1);
+                $("#pagecontainercart").empty();
+                displayCart(cartArray);
+
+                var num = parseFloat(data[i]['Price']);
+                console.log(num);   
+                cartTotal = cartTotal - num;
+                console.log("cart total is " + cartTotal);
+                
             }
 
-            
-            localStorage.setItem("cartArray",JSON.stringify(cartArray));
-            
-
-            //console.log(cartArray);
-            console.log(JSON.parse(localStorage.getItem("cartArray")));
-            console.log(cartArray);
-        });
+        }
 
         
+        localStorage.setItem("cartArray",JSON.stringify(cartArray));
+        localStorage.setItem("cartTotal",JSON.stringify(cartTotal));
+        
+        console.log(JSON.parse(localStorage.getItem("cartArray")));
 
+    });
 
-    }
+}
 
     
     

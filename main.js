@@ -58,19 +58,19 @@ function main(){
 
     displayCart(finalCartArray);
 
+    removeFromCart();
+
     var finalCartTotal = localStorage.getItem("cartTotal");
 
-    if (finalCartTotal == 0){
-      $('.finalprice').append("$0");
-    }
-
-    else{
-      $('.finalprice').append("$ " + finalCartTotal); 
-    }
+    
+      
+ 
+    $('.finalprice').html("$ " + finalCartTotal); 
+  
 
     
 
-    removeFromCart();
+    
 
     /*
     addToCart();
