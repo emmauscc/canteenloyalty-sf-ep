@@ -54,8 +54,35 @@ body{
 }
 
 #pagecontainercart{
+
+    background-color: #163658;
+    height: auto;
+
+}
+
+.cartitems{
+    float: left; 
+    width: 800px;
+    padding: 15px; 
+    height: 100%;
+    background-color: white;
+}
+
+.sectiontitle{
+    height: 50px;
+    font-size: 25px;
+    color: #163658 ;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.carttotal{
+    width: 170px;
+    float: left;
+    background-color: white;
+    height: 100%;
+    margin-left: 20px;
     padding: 15px;
-    width: 1020px;
 }
 
 .pageheader{
@@ -75,8 +102,37 @@ body{
     float: left; 
     width: 160px; 
     background-color: white; 
-    height: 1845px; 
     padding: 20px; 
+}
+
+.foodcategory{
+    background-color: #eab02b;
+    text-decoration: none;
+    color: #163658;
+    height: 30px;
+    width: 150px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+
+.foodcategory a{
+	float: left; 
+	display: block; 
+	text-decoration: none; 
+	text-align: center; 
+	line-height: 30px;
+    background-color:#eab02b; 
+    color: #163658;
+    width: 150px
+}
+
+.foodcategory a:hover{
+	background-color: white; 
+    color: #163658;
+    width: 150px;
+
+    
 }
 
 .shoppingcontainer{
@@ -231,6 +287,13 @@ p{
     margin-top: 10px;
 }
 
+.removeqtyinput{
+    float: left; 
+    width: 60px;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
 .cartButtons{
     float: left; 
     margin-top: 10px;
@@ -242,6 +305,33 @@ p{
     height: 20px;
 }
 
+.removecartButtons{
+    float: left; 
+    margin-top: 10px;
+    background-color: #eab02b;
+    font-family: 'Times New Roman', Times, serif;
+    border: solid #163658 1px;
+    color: #163658;
+    margin-left: 35px;
+    height: 20px;
+}
+
 .foodimage{
     margin-top: -10px;
+}
+
+.checkoutbutton{
+    float: left; 
+    margin-top: 10pxx;
+    background-color: #eab02b;
+    font-family: 'Times New Roman', Times, serif;
+    border: solid #163658 1px;
+    color: #163658;
+    height: 20px;
+}
+
+.finalprice{
+    color: #163658;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
 }

@@ -10,7 +10,6 @@ function display(dataset,category,location){
     for (var i=0;i<dataset.length-1;i++){
 
         if (dataset[i]["Category"]==category){
-            console.log(dataset[i]["Category"]); 
             $(location).append("<div></div>").children().last().addClass("grid"+[i]);             
             $('.grid'+[i]).append("<h3>" + dataset[i]["Item"] + "</h3>").append(" ").append("<br>").append("<p>$"+dataset[i]["Price"]+"</p>");
             $('.grid'+[i]).append("<br>").append("<img src='http://via.placeholder.com/150x150/163658?text=Food Image' class='foodimage'>").append("<br>").append("<input type='number' placeholder='Qty'></input>").children().last().addClass("qtyinput").attr("id","qty"+[i]).append("<br>");
@@ -19,14 +18,16 @@ function display(dataset,category,location){
         }
     }
 }
-console.log("hi")
+
 function displayCart(dataset){
+
 
     for (var i=0;i<dataset.length;i++){
 
-            $('#pagecontainercart').append("<div></div>").children().last().addClass("cartgrid"+[i]);             
+            $('.cartitems').append("<div></div>").children().last().addClass("cartgrid"+[i]);             
             $('.cartgrid'+[i]).append("<h3>" + dataset[i]["Item"] + "</h3>").append(" ").append("<br>").append("<p>$"+dataset[i]["Price"]+"</p>");
-            $('.cartgrid'+[i]).append("<br>").append("<img src=\"http://via.placeholder.com/150x150/163658?text=Food Image\">").append("<br>").append("<button type='button'>Remove from Cart</button>").children().last().addClass("removecartButtons").attr("id","removecart"+[i]);
+            $('.cartgrid'+[i]).append("<br>").append("<img src=\"http://via.placeholder.com/150x150/163658?text=Food Image\">").append("<br>").append("<input type='number' placeholder='Qty'></input>").children().last().addClass("removeqtyinput").attr("id","removeqty"+[i]).append("<br>");
+            $('.cartgrid'+[i]).append("<br>").append("<button type='button'>Remove from Cart</button>").children().last().addClass("removecartButtons").attr("id","removecart"+[i]);
             $('.cartgrid'+[i]).css({ "width":"190px", "float":"left", "border":"solid #eab02b 3px","text-align":"center", "margin":"2px", "padding-bottom":"10px", "height":"290px"});
 
     }
@@ -49,9 +50,6 @@ $(document).ready(function(){
 
             console.log(data);
 
-            console.log(Object.keys(data[0]));
-
-            console.log(data[15]["Type\r"]);
             
         }   
     })
@@ -80,16 +78,7 @@ $(document).ready(function(){
         //return result; //JavaScript object
         return JSON.stringify(result); //JSON
     }
-    
-    console.log("ready");
-    console.log(data);
-    
-    
-    
-    
-   
-   
-    
+     
 
 });    
 

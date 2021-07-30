@@ -14,6 +14,7 @@ totalPoints(totalcost);
 console.log(points);
 var data = []; 
 var cartArray = [];
+var cartTotal = 0;
 
 $(document).ready(main);
 
@@ -34,7 +35,7 @@ function main(){
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
 
-    $('.loginButton').click(console.log('pressed'));
+    $('.loginButton').click(console.log('login button pressed'));
     
     
     
@@ -56,6 +57,18 @@ function main(){
     console.log(finalCartArray);
 
     displayCart(finalCartArray);
+
+    var finalCartTotal = localStorage.getItem("cartTotal");
+
+    if (finalCartTotal == 0){
+      $('.finalprice').append("$0");
+    }
+
+    else{
+      $('.finalprice').append("$ " + finalCartTotal); 
+    }
+
+    
 
     removeFromCart();
 
