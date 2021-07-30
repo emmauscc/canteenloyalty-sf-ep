@@ -49,7 +49,6 @@ function main(){
 
     addToCart();
 
-    
     var newCartArray = localStorage.getItem("cartArray"); 
 
     var finalCartArray = JSON.parse(newCartArray);

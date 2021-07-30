@@ -223,3 +223,25 @@ p{
     margin-top: 20px;
     margin-left: 20px;
 }
+
+.qtyinput{
+    float: left; 
+    width: 60px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.cartButtons{
+    float: left; 
+    margin-top: 10px;
+    background-color: #eab02b;
+    font-family: 'Times New Roman', Times, serif;
+    border: solid #163658 1px;
+    color: #163658;
+    margin-left: 5px;
+    height: 20px;
+}
+
+.foodimage{
+    margin-top: -10px;
+}
