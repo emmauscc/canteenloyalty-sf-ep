@@ -23,7 +23,10 @@ function addToCart(){
 
         console.log($(this).attr('id'));
 
+        
         for (var i=0; i<data.length;i++){
+
+            var qtyvalue = $("#qty" + [i]).val();
             
             if ($(this).attr('id')=="cart"+[i]){
 
@@ -31,15 +34,31 @@ function addToCart(){
 
                 //console.log(cartArray.includes(data[i]));
 
-                if(cartArray.includes(data[i])==false){
+                if (qtyvalue == 0){
+                    $('#qty'+[i]).attr('placeholder', 'QTY???');
+                    $('#qty'+[i]).css({ "color":"red"});
+                    console.log("qty value missing")
+                }
 
-                    cartArray.push(data[i]); 
+                else{
 
-                    var num = parseFloat(data[i]['Price']);
-                    console.log(num);
-                    cartTotal = cartTotal + num;
-                    console.log("cart total is " + cartTotal);
-                    
+                    $('#qty'+[i]).css({ "color":"black"});
+
+                    if(cartArray.includes(data[i])==false){
+
+                        console.log("qty value is" + qtyvalue);
+
+                        cartArray.push(data[i]); 
+
+                        var num = parseFloat(data[i]['Price']);
+                        console.log(num);
+                        cartTotal = cartTotal + num;
+                        console.log("cart total is " + cartTotal);
+
+
+                        
+                    }
+
                 }
 
             }
