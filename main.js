@@ -36,9 +36,6 @@ function main(){
       firebase.analytics();
 
     $('.loginButton').click(console.log('login button pressed'));
-    
-    
-    
 
     displayCategory("Hot Food", "HotFoodBox");
 

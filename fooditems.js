@@ -16,6 +16,8 @@ function display(dataset,category,location){
             $('.grid'+[i]).append("<button type='button'>Add to Cart</button>").children().last().addClass("cartButtons").attr("id","cart"+[i]);
             $('.grid'+[i]).append("<button type='button'>Add to Favourites</button>").children().last().addClass("favouriteButtons").attr("id","favourite"+[i]);
             $('.grid'+[i]).css({ "width":"190px", "float":"left", "border":"solid #eab02b 3px","text-align":"center", "margin":"2px", "padding-bottom":"10px", "height":"330px"});
+
+            
         }
     }
 }
