@@ -11,7 +11,7 @@ function loginUser(){
     } else {
         console.log('not empty');
         firebaseLogin($('.IDinput').val());
-        console.log(perdata); 
+        console.log(middata); 
         // window.location.href = "index.html"
     }
 };
@@ -19,13 +19,11 @@ function loginUser(){
 
 
 function firebaseLogin(key){
-
-    
     var getKeyInfo = firebase.database().ref(key);
 
     getKeyInfo.on('value', (snapshot) => {
         const tempperdata = snapshot.val();
-        perdata = JSON.parse(tempperdata);
-        console.log(perdata);    
+        middata = JSON.parse(tempperdata);
+        console.log(middata);    
     })
 };
