@@ -1,6 +1,6 @@
 
-// var perdata = {id:"10236", name:"Steven", grade:"9", class:"9M", campus:"South Plympton", points:"100", cardNumber:"1111222233334444", expiryDate:"04/29", securityNumber:"111", picture:""}
-var perdata = {};
+var perdata = {id:"", name:"", grade:"", campus:"", points:"0", cardNumber:"", expiryDate:"", securityNumber:"", picture:""}
+
 
 // console.log(arraifiedObject(0))
 
