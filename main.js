@@ -14,6 +14,7 @@ totalPoints(totalcost);
 console.log(points);
 var data = []; 
 var cartArray = [];
+var cartTotal = 0;
 
 $(document).ready(main);
 
@@ -34,7 +35,7 @@ function main(){
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
 
-    $('.loginButton').click(console.log('pressed'));
+    $('.loginButton').click(console.log('login button pressed'));
     
     
     
@@ -49,7 +50,6 @@ function main(){
 
     addToCart();
 
-    
     var newCartArray = localStorage.getItem("cartArray"); 
 
     var finalCartArray = JSON.parse(newCartArray);
@@ -60,11 +60,25 @@ function main(){
 
     removeFromCart();
 
-    /*
-    addToCart();
-    console.log(cartArray);
-    display(cartArray,"Baguette","#pagecontainercart");
-    */
+    var finalCartTotal = localStorage.getItem("cartTotal");
+ 
+    $('.finalprice').html("$ " + finalCartTotal); 
+  
+    addToFavourite();
+
+    var newFavouriteArray = localStorage.getItem("favouriteArray"); 
+
+    var finalFavouriteArray = JSON.parse(newFavouriteArray);
+
+    console.log(finalFavouriteArray);
+
+    displayFavourite(finalFavouriteArray);
+
+    removeFromFavourite();
+    
+
+    
+
 
     // userLogin(idNum);
     totalPoints(totalcost);
