@@ -1,30 +1,30 @@
-Item,Category,Price
-Garlic Bread,Hot Food,2
-Pizza,Hot Food,2.50
-Potato Wedges,Hot Food,2
-Hot Dog,Hot Food,3.70
-Pie,Hot Food,3.70
-Sausage Roll,Hot Food,3.70
-Chilli Chicken,Baguette,3.50
-Chicken Schnitzel,Baguette,3.50
-Meatball,Baguette,3.50
-Falafel,Baguette,4
-Grainwaves,Snacks,1
-Plain chips,Snacks,1
-Honey Soy Chicken Chips,Snacks,1
-Fruit,Snacks,1.20
-Banana Bread,Snacks,2
-Fruit Tubes,Ice Blocks,0.50
-Chocolate Moo,Ice Blocks,1
-Lifesaver Icy Pole,Ice Blocks,1
-Lemonade Icy Pole,Ice Blocks,1
-Twisted frozen yogurt,Ice Blocks,2
-Water ,Drinks,1.50
-250ml Juices,Drinks,1.50
-Up and Go,Drinks,2
-Oak Strawberry-Chocolate,Drinks,2
-Sushi,Specials,2.50
-Butter Chicken with Rice,Specials,5
-Malaysian Chicken with Rice,Specials,5
-Dahl,Specials,5
-Bubble Tea, Specials, 2.40
+Item,Category,Price,Quantity
+Garlic Bread,Hot Food,2,0
+Pizza,Hot Food,2.50,0
+Potato Wedges,Hot Food,2,0
+Hot Dog,Hot Food,3.70,0
+Pie,Hot Food,3.70,0
+Sausage Roll,Hot Food,3.70,0
+Chilli Chicken,Baguette,3.50,0
+Chicken Schnitzel,Baguette,3.50,0
+Meatball,Baguette,3.50,0
+Falafel,Baguette,4,0
+Grainwaves,Snacks,1,0
+Plain chips,Snacks,1,0
+Honey Soy Chicken Chips,Snacks,1,0
+Fruit,Snacks,1.20,0
+Banana Bread,Snacks,2,0
+Fruit Tubes,Ice Blocks,0.50,0
+Chocolate Moo,Ice Blocks,1,0
+Lifesaver Icy Pole,Ice Blocks,1,0
+Lemonade Icy Pole,Ice Blocks,1,0
+Twisted frozen yogurt,Ice Blocks,2,0
+Water ,Drinks,1.50,0
+250ml Juices,Drinks,1.50,0
+Up and Go,Drinks,2,0
+Oak Strawberry-Chocolate,Drinks,2,0
+Sushi,Specials,2.50,0
+Butter Chicken with Rice,Specials,5,0
+Malaysian Chicken with Rice,Specials,5,0
+Dahl,Specials,5,0
+Bubble Tea, Specials, 2.40,0
