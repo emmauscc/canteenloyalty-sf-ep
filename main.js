@@ -1,10 +1,12 @@
 
-var perdata = {id:"", name:"", grade:"", campus:"", points:"0", cardNumber:"", expiryDate:"", securityNumber:"", picture:""}
-
+var perdata = {id:"11111", name:"Jimmy C", grade:"7", campus:"South Plymptom", points:"0", cardNumber:"11112222333444", expiryDate:"11/11", securityNumber:"111", picture:""}
+var objectnames = Object.keys(perdata);
+var arraydata = Object.values(perdata);   //arraifiedObject(perdata);
 
 // console.log(arraifiedObject(0))
 
 var tempperdata;
+var middata;
 // var idNum = $('username').val();
 var totalcost;
 var points;
@@ -21,21 +23,14 @@ $(document).ready(main);
 function main(){
     
 
-    var firebaseConfig = {
-        apiKey: "AIzaSyAD6I8LABP6IgRjECl6ktRP_xRUajcFQM8",
-        authDomain: "canteen-loyalty.firebaseapp.com",
-        databaseURL: "https://canteen-loyalty-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "canteen-loyalty",
-        storageBucket: "canteen-loyalty.appspot.com",
-        messagingSenderId: "721137803742",
-        appId: "1:721137803742:web:d1ee73eec75fba91673d4f",
-        measurementId: "G-T6VBLGTYVT"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
+    
 
-    $('.loginButton').click(console.log('login button pressed'));
+    $('.loginButton').click( function(){loginUser()});
+    console.log('middata = '+middata);
+
+    console.log(arraydata);
+    console.log(objectnames);
+    loadAccount();
 
     displayCategory("Hot Food", "HotFoodBox");
 
@@ -81,3 +76,8 @@ function main(){
     totalPoints(totalcost);
     console.log(points);
 }
+
+/*
+function arraifiedObject(x){
+  arraydata = object.values(x);
+} */

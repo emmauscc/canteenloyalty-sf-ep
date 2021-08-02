@@ -279,6 +279,7 @@ p{
 }
 
 #profile{
+    float:left;
     width: 400px;
     margin-top: 20px;
     margin-left: 20px;
@@ -376,4 +377,40 @@ p{
 #pagecontainerfavourite{
     padding: 20px;
     width: 1010px; 
+}
+
+.accountcontainer{
+    float:left;
+    width: 560px;
+    border-color: #eab02b;
+    border-style: solid;
+    border-width: 2px;
+    height:auto;
+    margin: 20px;
+}
+
+.information{
+    font-size: 18px;
+    color: black;
+    font-style: italic; 
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.informationTitle{
+    font-size: 20px;
+    color: #163658;
+    font-style: oblique; 
+    text-transform: uppercase;
+    font-weight: 1000;
+}
+
+.infoupdate{
+    font-size: 14px;
+    background-color: #eab02b;
+    border-color: #eab02b;
+    height: 25px;
+    width:60px;
+    color:black;
+    float:right;
+
 }
