@@ -183,14 +183,25 @@ function removeFromCart(){
     $(".changeqtyButtons").click(function(){
 
         console.log("qtybutton clicked");
+
+        
+
         for (var i=0; i<cartArray.length;i++){
+
+            
 
             var qtyvalue = $("#removeqty" + [i]).val();
 
-            if ($(this).attr('id')=="changeqty"+[i]){
+            if (qtyvalue != cartArray[i]['Quantity']){
 
-                cartArray[i]["Quantity"] = qtyvalue;    
-                
+                if ($(this).attr('id')=="changeqty"+[i]){
+
+                    $('#changeqty'+[i]).css({"background-color":"white"});
+
+                    cartArray[i]["Quantity"] = qtyvalue;    
+                    
+                }
+
             }
 
             var num = parseFloat(cartArray[i]['Price']);
@@ -210,10 +221,12 @@ function removeFromCart(){
 
             if ($(this).attr('id')=="changeqty"+[i]){
 
-            $('.finalprice').html("$ " + cartTotal); 
+                $('.finalprice').html("$ " + cartTotal); 
 
             }
+            
         }
+
 
         localStorage.setItem("cartArray",JSON.stringify(cartArray));
         localStorage.setItem("cartTotal",JSON.stringify(cartTotal));
