@@ -25,6 +25,8 @@ function loginUser(){
         $('.errormessage').html(' ');
         console.log('not empty');
         firebaseLogin($('.IDinput').val());
+
+        localStorage.setItem("personaldata",JSON.stringify(middata));
         console.log(middata); 
         window.location.href = "index.html"
     }
