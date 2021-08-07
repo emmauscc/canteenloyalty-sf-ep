@@ -9,13 +9,16 @@ function addToCart(){
         cartArray = [];
         localStorage.setItem("cartTotal",0);
         
-    }
 
+    }
     else{
 
         cartTotal = JSON.parse(localStorage.getItem("cartTotal"));
 
     }
+
+
+console.log("hello");
 
     $('.cartButtons').click(function(){
 
