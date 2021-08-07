@@ -30,7 +30,7 @@ function displayCart(dataset){
         $('.cartitems').append("<div></div>").children().last().addClass("cartgrid"+[i]);             
         $('.cartgrid'+[i]).append("<h3>" + dataset[i]["Item"] + "</h3>").append(" ").append("<br>").append("<p>$"+dataset[i]["Price"]+"</p>");
         $('.cartgrid'+[i]).append("<br>").append("<img src=\"http://via.placeholder.com/150x150/163658?text=Food Image\">").append("<br>").append("<input type='number' placeholder="+ dataset[i]["Quantity"] +"></input>").children().last().addClass("removeqtyinput").attr("id","removeqty"+[i]).append("<br>");
-        $('.cartgrid'+[i]).append("<button type='button'>Change Qty</button>").children().last().addClass("changeqtyButtons").attr("id","changeqty"+[i]);
+        $('.cartgrid'+[i]).append("<button type='button'>Change Qty</button>").children().last().addClass("changeqtyButtons").attr("id","cart"+[i]);
         $('.cartgrid'+[i]).append("<br>").append("<button type='button'>Remove from Cart</button>").children().last().addClass("removecartButtons").attr("id","removecart"+[i]);
         $('.cartgrid'+[i]).css({ "width":"190px", "float":"left", "border":"solid #eab02b 3px","text-align":"center", "margin":"2px", "padding-bottom":"10px", "height":"290px"});
 

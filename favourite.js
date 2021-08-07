@@ -19,7 +19,11 @@ function addToFavourite(){
 
                 console.log(favouriteArray.includes(data[i]));
 
+                
+
                 if(favouriteArray.includes(data[i])==false){
+
+                    $('#favourite'+[i]).css({"background-color":"white"});
 
                     console.log("yes");
 
