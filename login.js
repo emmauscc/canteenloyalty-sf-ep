@@ -19,7 +19,7 @@ $(document).ready(function(){
 function loginUser(){
     console.log("button pressed");
     console.log($('.IDinput').val());   
-    if ($('.IDinput').val().length<5||$('.IDinput').val().length>5){
+    if ($('.IDinput').val().length!=5){
         $('.errormessage').html('Login failed. Try again');
     } else {
         $('.errormessage').html(' ');
@@ -40,7 +40,7 @@ function firebaseLogin(key){
     getKeyInfo.on('value', (snapshot) => {
         const tempperdata = snapshot.val();
         middata = tempperdata;
-        // middata = JSON.parse(tempperdata);
+        middata = JSON.parse(tempperdata);
         console.log(middata);    
     })
 };

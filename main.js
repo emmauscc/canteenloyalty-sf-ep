@@ -4,12 +4,15 @@ var middata;
 var totalcost;
 var points;
 
-
+var objectnames;
+var arraydata;
 var data = []; 
-var cartArray = [];
+var cartArray = [ ];
 var cartTotal = 0;
 
 $(document).ready(main);
+
+console.log(localStorage);
 
 function main(){
     
@@ -20,8 +23,8 @@ function main(){
     console.log('middata = '+middata);
     
     var newperdata = localStorage.getItem("personaldata");
-    var perdata = JSON.parse(newperdata);
-    //var perdata = {id:"11111", name:"Jimmy C", grade:"7", campus:"South Plymptom", points:"0", cardNumber:"11112222333444", expiryDate:"11/11", securityNumber:"111", picture:""}
+   // var perdata = JSON.parse(newperdata);
+    var perdata = {id:"11111", name:"Jimmy C", grade:"7", campus:"South Plymptom", points:"0", cardNumber:"11112222333444", expiryDate:"11/11", securityNumber:"111", picture:""}
     var objectnames = Object.keys(perdata);
     var arraydata = Object.values(perdata);  
     
@@ -29,7 +32,7 @@ function main(){
     console.log(objectnames); 
 
     
-    loadAccount();
+    loadAccount(); 
 
     displayCategory("Hot Food", "HotFoodBox");
 
@@ -77,3 +80,6 @@ function main(){
     totalPoints(cartTotal);
 console.log(points);
 }
+
+
+
