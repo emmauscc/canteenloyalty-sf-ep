@@ -8,7 +8,7 @@ function addToCart(){
         
         cartArray = [];
         localStorage.setItem("cartTotal",0);
-        
+
     }
 
     else{
@@ -16,6 +16,8 @@ function addToCart(){
         cartTotal = JSON.parse(localStorage.getItem("cartTotal"));
 
     }
+
+    console.log("hello");
 
     $('.cartButtons').click(function(){
 
