@@ -1,7 +1,5 @@
 function loadAccount(){
 
-    console.log(arraydata);
-    console.log(objectnames); 
     // $('.accountcontainer').append("<div class='imageInfo">+perdata['picture']+"</div>");
     for(i=0;i<8; i++){
         if (i==0||i==4){} else {
