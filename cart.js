@@ -17,7 +17,7 @@ function addToCart(){
 
     }
 
-    console.log("hello s");
+    console.log("hello");
 
     $('.cartButtons').click(function(){
 
