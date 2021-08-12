@@ -35,7 +35,22 @@
     <div class = "pageheader">Checkout</div>
     <div class = "pagecontainer" id="pagecontainercheckout">
         <div class = "totalcheckout"></div>
-        <button type="button">Back to My Cart</button>
+        <button type="button" class="return">Back to My Cart</button><br><br><br>
+        <div class = "paytypelabel">
+            <label for = "PaymentType" class="droplabel">Select Payment Type</label><br>
+            <select name="PaymentType" class="dropbox">
+                <option val="v"> Visa </option>
+                <option val="C"> Cash </option>
+                <option val="A"> ApplePay </option>
+            </select><br>
+            </div class="cardDetDis">
+            <input type="text" class="cardinput" id="card" placeholder="card number"></input><br>
+            <input type="text" class="cardinput" id="expiry" placeholder="expiry date"></input><br>
+            <input type="text" class="cardinput" id="secure" placeholder="security number"></input><br>
+            </div>
+        </div>
+        
+
     </div>
     
 </body>

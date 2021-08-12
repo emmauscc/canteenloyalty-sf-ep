@@ -425,3 +425,53 @@ p{
     float:right;
 
 }
+
+.droplabel{
+    font-size:20px;
+    font-weight: 300;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    margin:5px;
+    margin-left:100px;
+}
+
+
+.dropbox{
+    width:100px;
+    height:20px;
+    font-size: 15px;
+    border-color: black;
+    border-style: solid;
+    font-family: 'Times New Roman', Times, serif;
+    border-width: 1px;
+    background-color: #ffe9b6;
+    margin:5px;
+    margin-left: 100px;
+}
+
+.cardinput{
+    width:200px;
+    height:20px;
+    font-size: 15px;
+    border-color: black;
+    border-style: solid;
+    font-family: 'Times New Roman', Times, serif;
+    border-width: 2px;
+    background-color: #ffe9b6;
+    margin:5px;
+    margin-left: 100px;
+}
+
+
+.return{
+    width:150px;
+    height:auto;
+    font-size: 15px;
+    border-color: black;
+    border-style: solid;
+    font-family: 'Times New Roman', Times, serif;
+    border-width: 2px;
+    background-color: #eab02b;
+    margin:5px;
+
+}
