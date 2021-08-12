@@ -32,7 +32,7 @@ function main(){
     console.log(objectnames); 
 
     
-    loadAccount(); 
+    //loadAccount(); 
 
     displayCategory("Hot Food", "HotFoodBox");
 
@@ -62,14 +62,22 @@ function main(){
 
     console.log(finalCartArray);
 
-    displayCart(finalCartArray);
+    //displayCart(finalCartArray);
 
     removeFromCart();
 
     var finalCartTotal = localStorage.getItem("cartTotal");
  
     $('.finalprice').html("$ " + finalCartTotal); 
-  
+
+
+
+ 
+
+    $('.checkoutbutton').click(function(){
+        window.location.href = "checkout.html"
+    });
+    checkout();
     
     
 
@@ -77,7 +85,6 @@ function main(){
 
 
     // userLogin(idNum);
-    totalPoints(cartTotal);
 console.log(points);
 }
 
