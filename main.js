@@ -62,7 +62,7 @@ function main(){
 
     console.log(finalCartArray);
 
-    //displayCart(finalCartArray);
+     displayCart(finalCartArray);
 
     removeFromCart();
 
