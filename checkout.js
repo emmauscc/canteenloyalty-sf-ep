@@ -1,8 +1,10 @@
-var arraydata = [1,2,3,4,5,6,7,8];
 function checkout(){
-    $('#card').value(arraydata[5])
-    $('#expiry').value(arraydata[6])
-    $('#secure').value(arraydata[7])
+    var displaydata = localStorage.getItem("adata");
 
+    $('#card').value(displaydata[5]);
+    $('#expiry').value(displaydata[6]);
+    $('#secure').value(displaydata[7]);
+
+    //test
 
 };
