@@ -27,6 +27,9 @@ function main(){
     var perdata = {id:"11111", name:"Jimmy C", grade:"7", campus:"South Plymptom", points:"0", cardNumber:"11112222333444", expiryDate:"11/11", securityNumber:"111", picture:""}
     var objectnames = Object.keys(perdata);
     var arraydata = Object.values(perdata);  
+
+    localStorage.setItem("adata",arraydata);
+    localStorage.setItem("odata",objectnames);
     
     console.log(arraydata);
     console.log(objectnames); 
