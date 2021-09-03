@@ -16,6 +16,8 @@ $(document).ready(function(){
     
 });
 
+//
+
 function loginUser(){
     console.log("button pressed");
     console.log($('.IDinput').val());   
