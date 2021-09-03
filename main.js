@@ -46,18 +46,6 @@ function main(){
     displayCategory("Drinks", "DrinksBox");
     displayCategory("Specials", "SpecialsBox");
 
-    addToFavourite();
-
-    var newFavouriteArray = localStorage.getItem("favouriteArray"); 
-
-    var finalFavouriteArray = JSON.parse(newFavouriteArray);
-
-    console.log(finalFavouriteArray);
-
-    displayFavourite(finalFavouriteArray);
-
-    removeFromFavourite();
-
     addToCart();
 
     var newCartArray = localStorage.getItem("cartArray"); 
@@ -74,8 +62,17 @@ function main(){
  
     $('.finalprice').html("$ " + finalCartTotal); 
 
+    addToFavourite();
 
+    var newFavouriteArray = localStorage.getItem("favouriteArray"); 
 
+    var finalFavouriteArray = JSON.parse(newFavouriteArray);
+
+    console.log(finalFavouriteArray);
+
+    displayFavourite(finalFavouriteArray);
+
+    removeFromFavourite();
  
 
     $('.checkoutbutton').click(function(){
