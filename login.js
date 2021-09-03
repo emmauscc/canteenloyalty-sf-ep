@@ -19,6 +19,7 @@ $(document).ready(function(){
 //
 
 function loginUser(){
+    localStorage.clear();
     console.log("button pressed");
     console.log($('.IDinput').val());   
     if ($('.IDinput').val().length!=5){

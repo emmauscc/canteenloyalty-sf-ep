@@ -10,6 +10,7 @@ var data = [];
 var cartArray = [ ];
 var cartTotal = 0;
 
+
 $(document).ready(main);
 
 console.log(localStorage);
