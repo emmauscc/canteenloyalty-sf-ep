@@ -74,10 +74,9 @@ function main(){
 
     removeFromFavourite();
  
-
-    $('.checkoutbutton').click(function(){
-        window.location.href = "checkout.html"
-    });
+    totalPoints(cartTotal);
+    console.log(points);
+    
     checkout();
     
     

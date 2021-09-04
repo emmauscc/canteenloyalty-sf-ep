@@ -1,4 +1,6 @@
 function checkout(){
+    console.log("checkout");
+    
     var displaydata = localStorage.getItem("adata");
 
     $('#card').value(displaydata[5]);
