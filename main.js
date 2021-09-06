@@ -62,6 +62,12 @@ function main(){
  
     $('.finalprice').html("$ " + finalCartTotal); 
 
+    totalPoints(cartTotal)
+    $('.acpoints').html(" Number of earned Points: "+points);
+    console.log(points);
+
+    checkout();
+
     addToFavourite();
 
     var newFavouriteArray = localStorage.getItem("favouriteArray"); 
@@ -74,10 +80,8 @@ function main(){
 
     removeFromFavourite();
  
-    totalPoints(cartTotal);
-    console.log(points);
     
-    checkout();
+    
     
     
 

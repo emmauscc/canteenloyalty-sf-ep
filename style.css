@@ -475,3 +475,15 @@ p{
     margin:5px;
 
 }
+
+.acpoints{
+    width:190px;
+    height:auto;
+    font-size: 15px;
+    border-color: black;
+    border-style: solid;
+    font-family: 'Times New Roman', Times, serif;
+    border-width: 2px;
+    background-color: #eab02b;
+    margin:5px;
+}
