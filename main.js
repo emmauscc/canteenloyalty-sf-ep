@@ -16,9 +16,6 @@ $(document).ready(main);
 console.log(localStorage);
 
 function main(){
-    
-
-    
 
     $('.loginButton').click( function(){loginUser()});
     console.log('middata = '+middata);
@@ -35,9 +32,9 @@ function main(){
     console.log(arraydata);
     console.log(objectnames); 
 
+    loadAccount()
+    updateDetail()
     
-    //loadAccount(); 
-
     displayCategory("Hot Food", "HotFoodBox");
 
     displayCategory("Baguette", "BaguetteBox");

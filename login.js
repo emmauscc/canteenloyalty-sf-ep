@@ -38,8 +38,9 @@ function loginUser(){
         firebaseLogin($('.IDinput').val());
 
         localStorage.setItem("personaldata",middata);
+        // console.log(localStorage.getItem("personaldata"))
         console.log(middata); 
-        // window.location.href = "index.html"
+        window.location.href = "index.html"
     }
 };
 
