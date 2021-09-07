@@ -39,7 +39,7 @@ function loginUser(){
 
         localStorage.setItem("personaldata",middata);
         console.log(middata); 
-        window.location.href = "index.html"
+        // window.location.href = "index.html"
     }
 };
 
