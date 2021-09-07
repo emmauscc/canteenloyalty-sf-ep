@@ -10,14 +10,12 @@ var data = [];
 var cartArray = [ ];
 var cartTotal = 0;
 
+
 $(document).ready(main);
 
 console.log(localStorage);
 
 function main(){
-    
-
-    
 
     $('.loginButton').click( function(){loginUser()});
     console.log('middata = '+middata);
@@ -25,7 +23,7 @@ function main(){
     var newperdata = localStorage.getItem("personaldata");
    // var perdata = JSON.parse(newperdata);
     var perdata = {id:"11111", name:"Jimmy C", grade:"7", campus:"South Plymptom", points:"0", cardNumber:"11112222333444", expiryDate:"11/11", securityNumber:"111", picture:""}
-    var objectnames = Object.keys(perdata);
+    objectnames = Object.keys(perdata);
     var arraydata = Object.values(perdata);  
 
     localStorage.setItem("adata",arraydata);
@@ -34,9 +32,9 @@ function main(){
     console.log(arraydata);
     console.log(objectnames); 
 
+    loadAccount()
+    updateDetail()
     
-    //loadAccount(); 
-
     displayCategory("Hot Food", "HotFoodBox");
 
     displayCategory("Baguette", "BaguetteBox");
@@ -44,6 +42,28 @@ function main(){
     displayCategory("Ice Blocks", "IceBlocksBox");
     displayCategory("Drinks", "DrinksBox");
     displayCategory("Specials", "SpecialsBox");
+
+    addToCart();
+
+    var newCartArray = localStorage.getItem("cartArray"); 
+
+    var finalCartArray = JSON.parse(newCartArray);
+
+    console.log(finalCartArray);
+
+    displayCart(finalCartArray);
+
+    removeFromCart();
+
+    var finalCartTotal = localStorage.getItem("cartTotal");
+ 
+    $('.finalprice').html("$ " + finalCartTotal); 
+
+    totalPoints(cartTotal)
+    $('.acpoints').html(" Number of earned Points: "+points);
+    console.log(points);
+
+    checkout();
 
     addToFavourite();
 
@@ -56,31 +76,9 @@ function main(){
     displayFavourite(finalFavouriteArray);
 
     removeFromFavourite();
-
-    addToCart();
-
-    var newCartArray = localStorage.getItem("cartArray"); 
-
-    var finalCartArray = JSON.parse(newCartArray);
-
-    console.log(finalCartArray);
-
-     displayCart(finalCartArray);
-
-    removeFromCart();
-
-    var finalCartTotal = localStorage.getItem("cartTotal");
  
-    $('.finalprice').html("$ " + finalCartTotal); 
-
-
-
- 
-
-    $('.checkoutbutton').click(function(){
-        window.location.href = "checkout.html"
-    });
-    checkout();
+    
+    
     
     
 

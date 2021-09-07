@@ -2,26 +2,26 @@
 
 function addToCart(){
 
-    cartArray = JSON.parse(localStorage.getItem("cartArray"));
 
-    if (cartArray == null){
-        
-        cartArray = [];
-        localStorage.setItem("cartTotal",0);
-
-    }
-
-    else{
-
-        cartTotal = JSON.parse(localStorage.getItem("cartTotal"));
-
-    }
 
     console.log("hello");
 
     $('.cartButtons').click(function(){
 
-        cartArray = JSON.parse(localStorage.getItem("cartArray"));
+        cartArray = JSON.parse(localStorage.getItem("cartArray")); // 
+
+        if (cartArray == null){
+            
+            cartArray = [];
+            localStorage.setItem("cartTotal",0);
+    
+        }
+    
+        else{
+    
+            cartTotal = JSON.parse(localStorage.getItem("cartTotal"));
+    
+        }
 
         var cartArrayItems = [];
 
@@ -36,13 +36,11 @@ function addToCart(){
         
         for (var i=0; i<data.length;i++){
 
-            var qtyvalue = $("#qty" + [i]).val();
+            var qtyvalue = $("#qty" + [i]).val(); //
             
             if ($(this).attr('id')=="cart"+[i]){
 
                 console.log(cartArray);
-
-                //console.log(cartArray.includes(data[i]));
 
                 if (qtyvalue == 0){
                     $('#qty'+[i]).attr('placeholder', 'QTY???');
@@ -56,33 +54,18 @@ function addToCart(){
 
                     $('#qty'+[i]).css({ "color":"black"});
 
-                    //if(cartArray.includes(data[i]['Item'])==false){
-
                     console.log(cartArray.includes(data[i]));
 
-                    if(cartArrayItems.includes(data[i]['Item'])==false){
+                    if(cartArrayItems.includes(data[i]['Item'])==false){ //
 
-                        console.log("qty value is" + qtyvalue);
                         data[i]["Quantity"] = qtyvalue;
-                        console.log("new qty value is" +  data[i]["Quantity"]);
                         
-                        cartArray.push(data[i]); 
+                        cartArray.push(data[i]); //
 
-                        console.log(data);
-
-                        var num = parseFloat(data[i]['Price']);
-                        console.log(num);
-
-                        if (data[i]["Quantity"] == 1){
-                            cartTotal = cartTotal + num;
-                            console.log("cart total is " + cartTotal);
-                        }
-
-                        else{
-                            num = num*data[i]["Quantity"];
-                            cartTotal = cartTotal + num;
-                            console.log("cart total is " + cartTotal);
-                        }
+                        var num = parseFloat(data[i]['Price']); //
+                        num = num*data[i]["Quantity"];
+                        cartTotal = cartTotal + num;
+                        console.log("cart total is " + cartTotal);
                         
 
                         
@@ -92,11 +75,7 @@ function addToCart(){
 
             }
         
-        }
-
-        
-
-        
+        }  
 
         localStorage.setItem("cartArray",JSON.stringify(cartArray));
         localStorage.setItem("cartTotal",JSON.stringify(cartTotal));
@@ -143,11 +122,8 @@ function removeFromCart(){
 
             if ($(this).attr('id')=="removecart"+[i]){
 
-
-                console.log(cartArray);
                 cartArray.splice(i,1);
                 console.log(cartArray);
-                //console.log(cartArray[i]['Price']);
 
                 $(".cartitems").empty();
                 displayCart(cartArray);
@@ -155,17 +131,9 @@ function removeFromCart(){
 
                 for (var i=0; i<cartArray.length;i++){
                     var num = parseFloat(cartArray[i]['Price']);
-
-                    if (cartArray[i]["Quantity"] == 1){
-                        cartTotal = cartTotal + num;
-                        console.log("cart total is " + cartTotal);
-                    }
-
-                    else{
-                        num = num*cartArray[i]["Quantity"];
-                        cartTotal = cartTotal + num;
-                        console.log("cart total is " + cartTotal);
-                    }
+                    num = num*cartArray[i]["Quantity"];
+                    cartTotal = cartTotal + num;
+                    console.log("cart total is " + cartTotal);
                     
                 }
                 

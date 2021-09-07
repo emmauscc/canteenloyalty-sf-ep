@@ -1,13 +1,13 @@
 
 function addToFavourite(){
 
-    favouriteArray = JSON.parse(localStorage.getItem("favouriteArray"));
+    favouriteArray = JSON.parse(localStorage.getItem("favouriteArray")); //
 
     if (favouriteArray == null){
 
         favouriteArray = [];
         
-    }
+    } 
 
     $('.favouriteButtons').click(function(){
 
@@ -21,13 +21,13 @@ function addToFavourite(){
 
                 
 
-                if(favouriteArray.includes(data[i])==false){
+                if(favouriteArray.includes(data[i])==false){ //
 
                     $('#favourite'+[i]).css({"background-color":"white"});
 
                     console.log("yes");
 
-                    favouriteArray.push(data[i]); 
+                    favouriteArray.push(data[i]); //
                     
                 }
 
@@ -35,7 +35,7 @@ function addToFavourite(){
         
         }
 
-        localStorage.setItem("favouriteArray",JSON.stringify(favouriteArray));
+        localStorage.setItem("favouriteArray",JSON.stringify(favouriteArray)); // 
 
         console.log(favouriteArray);
     });
@@ -45,7 +45,7 @@ function addToFavourite(){
 function removeFromFavourite(){
 
     
-    favouriteArray = JSON.parse(localStorage.getItem("favouriteArray"));
+    favouriteArray = JSON.parse(localStorage.getItem("favouriteArray")); //
 
 
     $('.removefavouriteButtons').click(function(){
@@ -62,9 +62,8 @@ function removeFromFavourite(){
 
 
                 console.log(favouriteArray);
-                favouriteArray.splice(i,1);
+                favouriteArray.splice(i,1); //
                 console.log(favouriteArray);
-                //console.log(cartArray[i]['Price']);
 
                 $("#pagecontainerfavourite").empty();
                 displayFavourite(favouriteArray);
