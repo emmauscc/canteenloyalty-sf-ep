@@ -34,7 +34,7 @@ function main(){
     console.log(arraydata);
     console.log(objectnames); 
 
-    loadAccount()
+    loadAccount();
     updateDetail();
     
     displayCategory("Hot Food", "HotFoodBox");
@@ -57,16 +57,6 @@ function main(){
 
     removeFromCart();
 
-    var finalCartTotal = localStorage.getItem("cartTotal");
- 
-    $('.finalprice').html("$ " + finalCartTotal); 
-
-    totalPoints(cartTotal)
-    $('.acpoints').html(" Number of earned Points: "+points);
-    console.log(points);
-
-    checkout();
-
     addToFavourite();
 
     var newFavouriteArray = localStorage.getItem("favouriteArray"); 
@@ -78,6 +68,18 @@ function main(){
     displayFavourite(finalFavouriteArray);
 
     removeFromFavourite();
+
+    var finalCartTotal = localStorage.getItem("cartTotal");
+ 
+    $('.finalprice').html("$ " + finalCartTotal); 
+
+    totalPoints(cartTotal)
+    $('.acpoints').html(" Number of earned Points: "+points);
+    console.log(points);
+
+    checkout();
+
+    
  
     
     
