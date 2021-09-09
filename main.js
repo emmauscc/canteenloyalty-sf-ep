@@ -20,9 +20,11 @@ function main(){
     $('.loginButton').click( function(){loginUser()});
     console.log('middata = '+middata);
     
-    var newperdata = localStorage.getItem("personaldata");
-   // var perdata = JSON.parse(newperdata);
-    var perdata = {id:"11111", name:"Jimmy C", grade:"7", campus:"South Plymptom", points:"0", cardNumber:"11112222333444", expiryDate:"11/11", securityNumber:"111", picture:""}
+    var newperdata = JSON.parse(localStorage.getItem("personaldata"));
+    console.log(newperdata);
+    var perdata = newperdata;
+    console.log(perdata);
+    //var perdata = {id:"11111", name:"Jimmy C", grade:"7", campus:"South Plymptom", points:"0", cardNumber:"11112222333444", expiryDate:"11/11", securityNumber:"111", picture:""}
     objectnames = Object.keys(perdata);
     var arraydata = Object.values(perdata);  
 
@@ -33,7 +35,7 @@ function main(){
     console.log(objectnames); 
 
     loadAccount()
-    updateDetail()
+    updateDetail();
     
     displayCategory("Hot Food", "HotFoodBox");
 

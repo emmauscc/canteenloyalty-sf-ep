@@ -6,7 +6,7 @@ function loadAccount(){
     console.log(obnames);
     console.log(obvalues);
     for(i=0;i<8; i++){
-        if (i==0||i==4){} else {
+        if (i==0||i==3||i==4){} else {
             $('.accountcontainer').append("<button id='key"+i+"' value="+i+" class='infoupdate'>update</button>");
         }
         $('.accountcontainer').append("<div class='informationTitle'>"+obnames[i]+":</div><br>");         
@@ -29,7 +29,8 @@ function updateDetail(){
         console.log(obvalues);
 
         localStorage.setItem("adata",obvalues);
-
+        window.location.href = "account.html"
 
     });
+
 }

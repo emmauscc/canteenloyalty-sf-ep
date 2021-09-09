@@ -25,6 +25,18 @@ $(document).ready(function(){
 });
 
 //
+function firebaseLogin(key){
+    var getKeyInfo = firebase.database().ref(key);
+
+    getKeyInfo.on('value', (snapshot) => {
+        const tempperdata = snapshot.val();
+        console.log(tempperdata);
+        middata = JSON.parse(tempperdata);
+        console.log(middata);    
+        localStorage.setItem("personaldata",tempperdata);
+    })
+};
+
 
 function loginUser(){
     localStorage.clear();
@@ -36,23 +48,12 @@ function loginUser(){
         $('.errormessage').html(' ');
         console.log('not empty');
         firebaseLogin($('.IDinput').val());
-
-        localStorage.setItem("personaldata",middata);
-        // console.log(localStorage.getItem("personaldata"))
-        console.log(middata); 
-        window.location.href = "index.html"
+        
+        
+        setTimeout(function(){
+            console.log(localStorage.getItem("personaldata"));
+            window.location.href = "index.html"
+        }, 2000);
+        
     }
-};
-
-
-
-function firebaseLogin(key){
-    var getKeyInfo = firebase.database().ref(key);
-
-    getKeyInfo.on('value', (snapshot) => {
-        const tempperdata = snapshot.val();
-        console.log(tempperdata);
-        middata = JSON.parse(tempperdata);
-        console.log(middata);    
-    })
 };
