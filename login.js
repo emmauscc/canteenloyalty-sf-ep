@@ -1,4 +1,4 @@
-
+/*
 $(document).ready(function(){
     var firebaseConfig = {
         apiKey: "AIzaSyAXPe9NDkBX3zvVxJKE209czStQrWS1oOI",
@@ -13,14 +13,6 @@ $(document).ready(function(){
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
-
-      var stringObject = "{id:'11111', name:'Lacey', grade:'8', campus:'South Plymptom', points:'200', cardNumber:'4444333222111', expiryDate:'11/22', securityNumber:'900', picture:''}";
-
-      var sstring = JSON.stringify(stringObject);
-
-      console.log(sstring);
-
-      console.log(JSON.parse(sstring));
     
 });
 
@@ -52,8 +44,8 @@ function loginUser(){
         
         setTimeout(function(){
             console.log(localStorage.getItem("personaldata"));
-            window.location.href = "index.html"
-        }, 2000);
+            //window.location.href = "index.html"
+        }, 5000);
         
     }
-};
+}; */
