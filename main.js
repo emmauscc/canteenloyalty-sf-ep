@@ -134,8 +134,8 @@ function loginUser(){
         
         setTimeout(function(){
             console.log(localStorage.getItem("personaldata"));
-            //window.location.href = "index.html"
-        }, 5000);
+            window.location.href = "index.html"
+        }, 300);
         
     }
 };
