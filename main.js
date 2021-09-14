@@ -35,6 +35,10 @@ function main(){
 
     $('.loginButton').click( function(){loginUser()});
     console.log('middata = '+middata);
+
+    $('.return').click(function(){
+        window.location.href = "cart.html";
+    });
     
     var perdata = JSON.parse(localStorage.getItem("personaldata"));
     console.log(perdata);

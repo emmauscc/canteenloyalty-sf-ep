@@ -10,3 +10,16 @@ function checkout(){
     //test2
 
 };
+
+function makePayment(){
+    var tempdata = localStorage.getItem("adata");
+    var tempper = localStorage.getItem("personalData");
+    writePersonalData(tempdata[0],'default',tempper)
+};
+
+function writePersonalData(userId, path, detail) {
+    firebase.database().ref(path).set({
+
+      key1:detail
+    });
+  }
