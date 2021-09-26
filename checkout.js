@@ -2,9 +2,9 @@ function checkout(){
     console.log("checkout");
     var displaydata = localStorage.getItem("adata");
 
-    $('#card').value(displaydata[5]);
-    $('#expiry').value(displaydata[6]);
-    $('#secure').value(displaydata[7]);
+    $('.card').val(displaydata[5]);
+    $('.expiry').val(displaydata[6]);
+    $('.secure').val(displaydata[7]);
 
     //test
     //test2
@@ -12,14 +12,19 @@ function checkout(){
 };
 
 function makePayment(){
+    console.log('running payment');
     var tempdata = localStorage.getItem("adata");
+    console.log(tempper,tempdata);
     var tempper = localStorage.getItem("personalData");
-    writePersonalData(tempdata[0],'default',tempper)
+    writePersonalData(tempper,'users/',tempdata);
 };
 
 function writePersonalData(userId, path, detail) {
-    firebase.database().ref(path).set({
+    console.log(userId,path,detail);
 
+    firebase.database().ref(path).set({
       key1:detail
     });
   }
+
+  
