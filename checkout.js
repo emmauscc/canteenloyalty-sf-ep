@@ -17,6 +17,9 @@ function makePayment(){
     console.log(tempper,tempdata);
     var tempper = localStorage.getItem("personalData");
     writePersonalData(tempper,'users/',tempdata);
+    setTimeout(function(){
+      window.location.href = "login.html"
+  }, 6000);
 };
 
 function writePersonalData(userId, path, detail) {
