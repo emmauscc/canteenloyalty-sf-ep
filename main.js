@@ -101,17 +101,6 @@ function main(){
         window.location.href = "cart.html";
     });
     
-    
-
-    
- 
-    
-    
-    
-    
-
-    
-
 
     // userLogin(idNum);
 console.log(points);
