@@ -2,6 +2,9 @@
 
 function addToCart(){
 
+    console.log("addToCart");
+
+    cartArray = JSON.parse(localStorage.getItem("cartArray")); // 
 
 
     console.log("hello");
