@@ -31,6 +31,8 @@ firebaseLogin(48830);
 
 console.log(localStorage);
 
+//
+
 function main(){
 
     $('.loginButton').click( function(){loginUser()});
