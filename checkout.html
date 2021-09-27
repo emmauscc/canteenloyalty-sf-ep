@@ -16,6 +16,7 @@
     <script src="checkout.js"></script>
     <script src="favourite.js"></script>
     <script src="points.js"></script>
+    <script src="account.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
@@ -35,7 +36,9 @@
     <div class = "pageheader">Checkout</div>
     <div class = "pagecontainer" id="pagecontainercheckout">
         <div class = "totalcheckout"></div>
-        <button type="button" class="return">Back to My Cart</button><br><br><br>
+        <button type="button" class="return">Back to My Cart</button><br><br>
+        <div class="acpoints"></div>
+        <br>
         <div class = "paytypelabel">
             <label for = "PaymentType" class="droplabel">Select Payment Type</label><br>
             <select name="PaymentType" class="dropbox">
@@ -46,12 +49,11 @@
             </div class="cardDetDis">
             <input type="text" class="cardinput" id="card" placeholder="CARD NUMBER"></input><br>
             <input type="text" class="cardinput" id="expiry" placeholder="EXPIRY DATE"></input><br>
-            <input type="text" class="cardinput" id="secure" placeholder="SECURITY NUMBER"></input><br>
+            <input type="text" class="cardinput" id="secure" placeholder="SECURITY NUMBER"></input>
             </div>
-        </div>
-        
+                <button type="button" class="pay">Make Payment</button><br>
 
-    </div>
-    
+        </div>
+    </div> 
 </body>
 </html>

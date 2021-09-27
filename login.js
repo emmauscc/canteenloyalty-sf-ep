@@ -1,14 +1,14 @@
-
+/*
 $(document).ready(function(){
     var firebaseConfig = {
-        apiKey: "AIzaSyAD6I8LABP6IgRjECl6ktRP_xRUajcFQM8",
-        authDomain: "canteen-loyalty.firebaseapp.com",
-        databaseURL: "https://canteen-loyalty-default-rtdb.asia-southeast1.firebasedatabase.app/",
-        projectId: "canteen-loyalty",
-        storageBucket: "canteen-loyalty.appspot.com",
-        messagingSenderId: "721137803742",
-        appId: "1:721137803742:web:d1ee73eec75fba91673d4f",
-        measurementId: "G-T6VBLGTYVT"
+        apiKey: "AIzaSyAXPe9NDkBX3zvVxJKE209czStQrWS1oOI",
+        authDomain: "canteen-collaborative.firebaseapp.com",
+        databaseURL: "https://canteen-collaborative-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "canteen-collaborative",
+        storageBucket: "canteen-collaborative.appspot.com",
+        messagingSenderId: "1042074687324",
+        appId: "1:1042074687324:web:f27e3decefe73c86761399",
+        measurementId: "G-YWLEEL631D"
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
@@ -17,6 +17,18 @@ $(document).ready(function(){
 });
 
 //
+function firebaseLogin(key){
+    var getKeyInfo = firebase.database().ref(key);
+
+    getKeyInfo.on('value', (snapshot) => {
+        const tempperdata = snapshot.val();
+        console.log(tempperdata);
+        middata = JSON.parse(tempperdata);
+        console.log(middata);    
+        localStorage.setItem("personaldata",tempperdata);
+    })
+};
+
 
 function loginUser(){
     localStorage.clear();
@@ -28,22 +40,12 @@ function loginUser(){
         $('.errormessage').html(' ');
         console.log('not empty');
         firebaseLogin($('.IDinput').val());
-
-        localStorage.setItem("personaldata",JSON.stringify(middata));
-        console.log(middata); 
-        window.location.href = "index.html"
+        
+        
+        setTimeout(function(){
+            console.log(localStorage.getItem("personaldata"));
+            //window.location.href = "index.html"
+        }, 5000);
+        
     }
-};
-
-
-
-function firebaseLogin(key){
-    var getKeyInfo = firebase.database().ref(key);
-
-    getKeyInfo.on('value', (snapshot) => {
-        const tempperdata = snapshot.val();
-        middata = tempperdata;
-        middata = JSON.parse(tempperdata);
-        console.log(middata);    
-    })
-};
+}; */
