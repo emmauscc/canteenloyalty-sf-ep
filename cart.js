@@ -2,6 +2,8 @@
 
 function addToCart(){
 
+    console.log("addToCart");
+
     cartArray = JSON.parse(localStorage.getItem("cartArray")); // 
 
     if (cartArray == null){
