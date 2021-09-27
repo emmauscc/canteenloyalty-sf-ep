@@ -36,7 +36,20 @@ function main(){
     $('.loginButton').click( function(){loginUser()});
     console.log('middata = '+middata);
 
-   
+    var perdata = JSON.parse(localStorage.getItem("personaldata"));
+    console.log(perdata);
+    //var perdata = {id:'11111', name:'Jimmy C', grade:'7', campus:'South Plympton', points:'0', cardNumber:'11112222333444', expiryDate:'11/11', securityNumber:'111', picture:''}
+    objectnames = Object.keys(perdata);
+    arraydata = Object.values(perdata);  
+
+    localStorage.setItem("adata",arraydata);
+    localStorage.setItem("odata",objectnames);
+    
+    console.log(arraydata);
+    console.log(objectnames); 
+
+    loadAccount();
+    updateDetail();
     
     displayCategory("Hot Food", "HotFoodBox");
 
@@ -88,20 +101,7 @@ function main(){
         window.location.href = "cart.html";
     });
     
-    var perdata = JSON.parse(localStorage.getItem("personaldata"));
-    console.log(perdata);
-    //var perdata = {id:'11111', name:'Jimmy C', grade:'7', campus:'South Plympton', points:'0', cardNumber:'11112222333444', expiryDate:'11/11', securityNumber:'111', picture:''}
-    objectnames = Object.keys(perdata);
-    arraydata = Object.values(perdata);  
-
-    localStorage.setItem("adata",arraydata);
-    localStorage.setItem("odata",objectnames);
     
-    console.log(arraydata);
-    console.log(objectnames); 
-
-    loadAccount();
-    updateDetail();
 
     
  
@@ -144,7 +144,7 @@ function loginUser(){
         
         setTimeout(function(){
             console.log(localStorage.getItem("personaldata"));
-           // window.location.href = "index.html"
+            window.location.href = "index.html"
         }, 6000);
         
     }
